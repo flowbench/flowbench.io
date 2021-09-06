@@ -1,6 +1,8 @@
-# BrandSite
+# Flow Bench Brand Site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+This is the brand site repository for flowbench.io
+
+All feedback is welcome: bugs, usability or any other issues. 
 
 ## Development server
 
