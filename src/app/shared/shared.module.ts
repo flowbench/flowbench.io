@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 import { Router, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -20,13 +21,15 @@ import { HeaderComponent } from './header/header.component';
     RouterModule,
     ReactiveFormsModule,
     NzLayoutModule,
-    NzGridModule
+    NzGridModule,
+    NzFormModule
   ],
   exports: [
     RouterModule,
     ReactiveFormsModule,
     NzLayoutModule,
     NzGridModule,
+    NzFormModule,
     ContactComponent,
     HeaderComponent
   ]
