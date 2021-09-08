@@ -31,6 +31,8 @@
 
 // New variables
 @flb-page-max-width: 1240px;
+@flb-spacing-default: 32px; 
+@flb-max-text-width: 512px;
 
 body {
     padding: 48px;
@@ -64,17 +66,19 @@ body {
 .key-message {
     display: flex;
     flex-direction: column;
-    padding: 32px 0;
-    p {
-        max-width: 512px;
-        @media only screen and (max-width: @screen-xs) {
-            max-width: 100%;
-            width: 100%;
-        }
-        &.headline {
+    padding: @flb-spacing-default 0;
+    margin-top: @flb-spacing-default*3;
+    min-height: 200px;
+    justify-content: flex-start;
+
+    width: 100%;
+    .headline {
             font-size: 24px;
             font-weight: 600;
-        }
+            margin: 0;
+            // text-align: center;
+            // color: @primary-color;
+            color: #2D1A3F;
     }
 }
 
@@ -83,13 +87,13 @@ body {
     flex-direction: row;
     background-color: @primary-color;
 
-    border-radius: 0 16px 16px;
+    border-radius: 0 @flb-spacing-default @flb-spacing-default;
     color: @white;
     width: 100%;
     min-height: 256px;
     
     .message {
-        padding: 32px;
+        padding: @flb-spacing-default;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -99,7 +103,7 @@ body {
 
             font-size: 18px;
             font-weight: 300;
-            line-height: 32px;
+            line-height: @flb-spacing-default;
             margin-bottom: 0;
 
             strong {
@@ -124,7 +128,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     
-    padding: 32px;
+    padding: @flb-spacing-default;
 
     background-color: rgba(255,255,255,0.25);
     min-width: 464px;
@@ -164,7 +168,6 @@ body {
         }
         &:hover {
             color: @black;
-            // background: @primary-color;
             background: #F5C242;
             border: solid 0.5px rgba(@white, 0.1);
             transition: 0.3s !important;
@@ -175,7 +178,6 @@ body {
         }
     }
 
-    // .ant-input-group {
         .ant-textarea.ant-input {
             padding-top: 10px;
         }
@@ -204,5 +206,32 @@ body {
                 }
             }
         }
-    // }
+}
+
+
+
+.what-are-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: @flb-spacing-default*4 0;
+    padding: 0 @flb-spacing-default;
+
+    .flowbenchers {
+        max-width: 600px;
+        width: auto;
+        height: auto;
+        text-align: center;
+        display: flex;
+        align-self: center;
+        opacity: 0.82;
+    }
+
+    .pitch {
+        margin-top: @flb-spacing-default*3;
+        max-width: @flb-max-text-width;
+        width: 100%;
+        font-size: 18px;
+    }
 }
