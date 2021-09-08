@@ -59,6 +59,7 @@ body {
 
         img {
             margin-right: 12px;
+            border-bottom-left-radius: 8px;
         }
     }
 }
@@ -67,11 +68,16 @@ body {
     display: flex;
     flex-direction: column;
     padding: @flb-spacing-default 0;
-    margin-top: @flb-spacing-default*3;
+    margin: @flb-spacing-default*6 0 @flb-spacing-default*3;
     min-height: 200px;
     justify-content: flex-start;
-
     width: 100%;
+
+    @media only screen and (max-width: @screen-sm) {
+        margin: @flb-spacing-default*3 0 0;
+
+
+    }
     .headline {
             font-size: 24px;
             font-weight: 600;
@@ -80,6 +86,10 @@ body {
             // color: @primary-color;
             color: #2D1A3F;
     }
+}
+
+.watch-the-video {
+    margin: @flb-spacing-default*3 0;
 }
 
 .sign-up-cta {

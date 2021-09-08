@@ -16,12 +16,15 @@ export class BrandSplashComponent implements OnInit, AfterViewInit {
   @ViewChild('flbHeadLine') typewriter_hook: any;
 
 
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
+
 
     const typewriterHook = this.typewriter_hook.nativeElement;
 

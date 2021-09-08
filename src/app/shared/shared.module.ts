@@ -9,7 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     NzLayoutModule,
     NzGridModule,
-    NzFormModule
+    NzFormModule,
+    HttpClientModule,
   ],
   exports: [
     RouterModule,
@@ -31,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     NzGridModule,
     NzFormModule,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    HttpClientModule,
   ]
 })
 export class SharedModule { }
