@@ -9,3 +9,94 @@
 // @primary-color: #1890ff;
 /* You can add global styles to this file, and also import other style files */
 @import './assets/fonts/vic/vic-font.css';
+
+@import "~ng-zorro-antd/ng-zorro-antd.aliyun.less";
+
+@font-family: VIC, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+'Noto Color Emoji';
+@code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+@text-color: fade(@black, 85%);
+
+// color overriides
+
+@primary-color: #593A73;
+
+//New screen sizes
+
+// Addition for Flow Bench: Extra extra large screen / large desktop
+@screen-xxxl: 1800px;
+@screen-xxxl-min: @screen-xxxl;
+
+body {
+    padding: 48px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        max-width: 128px;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+
+        img {
+            margin-right: 12px;
+        }
+    }
+}
+
+.key-message {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    p {
+        max-width: 512px;
+        @media only screen and (max-width: @screen-xs) {
+            max-width: 100%;
+            width: 100%;
+        }
+        &.headline {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}
+
+.sign-up-cta {
+    display: flex;
+    flex-direction: row;
+    background-color: @primary-color;
+
+    border-radius: 0 16px 16px;
+    padding: 16px;
+    color: @white;
+    .message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        .tagline {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+        .earlyaccess {
+            color: @normal-color;
+        }
+    }
+    @media only screen and (max-width: @screen-sm) {
+        flex-direction: column;
+
+        .message {
+            width: 100%;
+            min-height: 128px;
+        }
+    }
+
+}
